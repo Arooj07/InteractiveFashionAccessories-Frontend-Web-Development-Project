@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Accessories</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: #884f77;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      #accessory-gallery {
+        padding: 2rem;
+        background-color: #f4f4f4;
+      }
+
+      .filter-search {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      #gallery-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .gallery-item {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(20.333% - 1rem);
+        max-width: calc(20.333% - 1rem);
+      }
+
+      .gallery-item img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+
+      .gallery-item h3 {
+        margin-top: 0.5rem;
+      }
+      footer {
+        background-color: #884f77;
+        color: white;
+        padding: 2rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .footer-section {
+        flex: 1;
+        padding: 1rem;
+      }
+
+      .footer-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-section ul li a:hover {
+        color: #ff6f61;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding: 1rem 0;
+        border-top: 1px solid #555;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>From Functional to Fashionable!</h1>
+      <p>Celebrate the accessory you can’t live without. 💕</p>
+    </header>
+    <main id="gallery"></main>
+    <section id="accessory-gallery">
+      <h2>Our Collection</h2>
+      <div class="filter-search">
+        <input type="text" id="search" placeholder="Search accessories..." />
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="bags">Bags</option>
+          <option value="watches">Watches</option>
+          <option value="jewelry">Jewellary</option>
+          <option value="rings">Rings</option>
+          <option value="glasses">Glasses</option>
+          <option value="scarves">Scarves</option>
+          <option value="Hair Clips">Hair Clips</option>
+          <option value="heels">Heels</option>
+        </select>
+      </div>
+      <div id="gallery-items"></div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            From Functional to Fashionable! Explore our curated collection of
+            the best fashion accessories that combine style and functionality.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@fashionaccessories.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123 Fashion Street, New York, NY 10001</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Fashion Accessories | Designed by Arooj</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const accessories = [
+          {
+            id: 1,
+            name: "Elegant Watch",
+            category: "watches",
+            image:
+              "https://static-01.daraz.pk/p/f71d1aef91f1aa952f9b8ccd99617f14.jpg",
+            description: "A sleek, modern watch perfect for any occasion.",
+          },
+          {
+            id: 2,
+            name: "Leather Bag",
+            category: "bags",
+            image:
+              "https://i0.wp.com/goandystore.com/wp-content/uploads/2022/11/H969fc42d408e48d0aba12c9738320279R-1-1.jpg?fit=800%2C800&ssl=1",
+            description:
+              "A stylish leather bag that combines fashion with functionality.",
+          },
+          {
+            id: 3,
+            name: "Gold Necklace",
+            category: "jewelry",
+            image:
+              "https://kinclimg8.bluestone.com/f_jpg,c_scale,w_828,q_80,b_rgb:f0f0f0/giproduct/BIVT0055P07_YAA18DIG6XXXXXXXX_ABCD00-PICS-00004-1024-22413.png",
+            description:
+              "A beautiful gold necklace that adds a touch of elegance.",
+          },
+          {
+            id: 4,
+            name: "Diamond Ring",
+            category: "rings",
+            image:
+              "https://m.media-amazon.com/images/I/41KrHRK7dUL._AC_UY1100_.jpg",
+            description:
+              "A stunning diamond ring that radiates timeless elegance and sophistication.",
+          },
+          {
+            id: 5,
+            name: "Sunglasses",
+            category: "glasses",
+            image:
+              "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=pexels-nitin-creative-46710.jpg&fm=jpg",
+            description:
+              "Chic sunglasses that elevate your look with a touch of modern elegance.",
+          },
+          {
+            id: 6,
+            name: "Infinity Scarf",
+            category: "scarves",
+            image:
+              "https://i.pinimg.com/736x/f9/f4/36/f9f43644f188d554f916669943ddae1b.jpg",
+            description:
+              "A cozy infinity scarf that wraps you in warmth and style all season long.",
+          },
+          {
+            id: 7,
+            name: "Barrettes",
+            category: "Hair Clips",
+            image: "https://m.media-amazon.com/images/I/71aDrhViwLL.jpg",
+            description:
+              "Stylish barrettes that add a touch of flair to your hairdo with effortless charm.",
+          },
+          {
+            id: 8,
+            name: "Block Heels",
+            category: "heels",
+            image:
+              "https://www.borjan.com.pk/cdn/shop/files/1_c27dc478-e1d5-4c89-9ecc-285057903dcb.png?v=1686314767",
+            description:
+              "Block heels that exude confidence and elevate any ensemble with undeniable allure.",
+          },
+        ];
+
+        const galleryItems = document.getElementById("gallery-items");
+        const searchInput = document.getElementById("search");
+        const filterSelect = document.getElementById("filter");
+
+        const displayAccessories = (items) => {
+          galleryItems.innerHTML = "";
+          items.forEach((item) => {
+            const galleryItem = document.createElement("div");
+            galleryItem.className = "gallery-item";
+            galleryItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            `;
+            galleryItems.appendChild(galleryItem);
+          });
+        };
+
+        const filterAndSearch = () => {
+          const searchText = searchInput.value.toLowerCase();
+          const filterCategory = filterSelect.value;
+
+          const filteredItems = accessories.filter((item) => {
+            const matchesSearch = item.name.toLowerCase().includes(searchText);
+            const matchesFilter =
+              filterCategory === "all" || item.category === filterCategory;
+            return matchesSearch && matchesFilter;
+          });
+
+          displayAccessories(filteredItems);
+        };
+
+        searchInput.addEventListener("input", filterAndSearch);
+        filterSelect.addEventListener("change", filterAndSearch);
+
+        displayAccessories(accessories);
+      });
+    </script>
+  </body>
+</html>
