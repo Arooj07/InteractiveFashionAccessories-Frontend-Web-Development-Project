@@ -9,8 +9,6 @@ This HTML document created a webpage for showcasing a collection of fashion acce
 4. Footer Section
 5. JavaScript Section
 
-![image](https://github.com/Arooj07/GirlsOnly_InteractiveFashionAccessories-Frontend-Web-Development-Project/assets/100277795/13839772-ebe6-466e-b6a2-ca6501d58338)
-![image](https://github.com/Arooj07/GirlsOnly_InteractiveFashionAccessories-Frontend-Web-Development-Project/assets/100277795/936c4f62-af09-4cd8-85be-73175bbb1762)
 
 
 
